@@ -392,7 +392,8 @@ function jack() {} // This needs to be here to make error reporting work correct
 			}
 		}
 		function getArguments() {
-			return invocations[0].getArgumentValues();
+			var invocation = arguments[0] ? arguments[0] : 0;
+			return invocations[invocation].getArgumentValues();
 		}
 	} // END FunctionGrab()
 
